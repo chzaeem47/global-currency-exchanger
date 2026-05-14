@@ -1,0 +1,17 @@
+
+
+CREATE DATABASE IF NOT EXISTS currency_app;
+USE currency_app;
+
+CREATE TABLE IF NOT EXISTS conversion_history (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  from_currency VARCHAR(10) NOT NULL,
+  to_currency VARCHAR(10) NOT NULL,
+  amount DECIMAL(18,6) NOT NULL,
+  rate DECIMAL(30,12) NOT NULL,
+  total DECIMAL(30,12) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_created (created_at DESC)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+

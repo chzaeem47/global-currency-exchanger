@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Currency Exchanger</title>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="h-screen">
+  <div class="h-screen bg-[url('https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180730103242/World-Landmarks.jpg')] bg-cover bg-center">
+    <div class="text-[18px] italic font-bold font-serif absolute left-340 top-5 bg-red-700 text-white rounded-3xl px-4 py-1 border-2 border-white hover:scale-110 hover:shadow-[0_0_10px_white]
+         active:scale-110 active:shadow-[0_0_10px_white]">History</div>
+  
+    <div class="font-serif font-bold text-white italic text-5xl bg-black rounded-4xl w-68 justify-center flex border-amber-500 border-4 absolute top-10 left-140">GLOBAL</div>
+    <p class="text-black font-bold text-[19px] absolute top-25 left-146">全球的   <box-icon type='solid' name='registered' class="absolute left-15 top-[3px]"></box-icon></p>
+    <div class="font-serif font-bold text-black italic text-[15px] bg-yellow-400 rounded-3xl w-46  justify-center flex border-black border-4 absolute top-25 left-170">Currency Exchanger</div>
+    <div class="w-170 h-140 rounded-xl bg-black/5 backdrop-blur-sm absolute left-100 top-37 shadow-[0_0_25px_rgba(128,128,128,3)]">
+    <p class="font-serif text-2xl absolute top-2 left-38 italic bg-red-700 text-white w-95 justify-center flex rounded-3xl border-2 border-white">Convert Your Currencies Here &hearts;</p>
+
+    <div class="flex w-100 justify-evenly absolute top-13 left-35">
+    <div class="bg-white text-red-800 w-20 flex justify-center rounded-3xl italic font-serif border-red-800 border-2">Accurate</div>
+    <div class="bg-white w-26 flex justify-center text-red-800 font-serif italic rounded-3xl border-red-800 border-2">Latest Rates</div>
+    <div class="bg-white w-21 flex justify-center text-red-800 font-serif italic rounded-3xl border-red-800 border-2">Reliable</div>
+    </div>
+    <div class="w-150 h-35 bg-gray-800 absolute top-25 left-10 rounded-4xl border-2 border-black shadow-[0_0_25px_rgba(255,165,0,10)]">
+    <p class="font-serif font-bold text-2xl italic text-white absolute top-3 left-10">&#9679; Enter Amount :</p>
+    <input type="text" id="amount-type" class=" enabled:hover:border-blue-700 w-130 bg-gray-200 border-2 border-black h-15 absolute top-12 left-8 rounded-3xl px-25 text-4xl pb-1 ">
+    <div id="cash-sign" class="text-4xl text-white font-serif italic absolute top-[52px] left-9 w-23 h-13 bg-black/40 rounded-3xl flex justify-center py-1 border-2 border-black">$</div>
+
+    
+    </div>
+    
+    
+    <!-----------From--------------->
+    
+    <div id="class-container" class="flex absolute top-65 left-15 bg-white text-[18px] font-serif italic rounded-3xl w-65 border-3 border-black shadow-[0_0_25px_rgba(255,255,255,1)]">
+    <p class="py-5 mx-2 text-3xl">From</p>
+    <img src="https://flagsapi.com/US/flat/64.png" id="from-flag">
+    <input list="fromList" id="from" placeholder="USD" class="w-26 rounded-3xl text-2xl px-2">
+    <datalist id="fromList"></datalist>
+    </div>
+    <p class="text-black text-4xl absolute top-69 left-82">&#x21c4;</p>
+    <div class="bg-white w-65 h-8 absolute top-87 left-15 rounded-3xl border-2 border-black font-serif italic flex justify-center py-[2px]" id="from-name">United States Dollar</div>
+
+
+    <!-----------To--------------->
+    
+
+    <div id="class-container" class=" flex absolute top-65 left-93 bg-white text-[18px] font-serif italic rounded-3xl w-61 border-3 border-black shadow-[0_0_25px_rgba(255,255,255,1)]">
+    <p class=" py-5 mx-5 text-3xl">To</p>
+    <img src="https://flagsapi.com/PK/flat/64.png" id="to-flag">
+    <input list="toList" id="to" placeholder="PKR" class="w-26 text-2xl px-2 rounded-3xl">
+    <datalist id="toList"></datalist>
+    </div>
+    <div class="bg-white w-62 h-8 absolute top-87 left-93 rounded-3xl border-2 border-black font-serif italic flex justify-center py-[2px]" id="to-name">Pakistani Rupees</div>
+
+
+
+
+    <button class="w-50 bg-blue-800 font-serif italic font-bold text-2xl text-white h-10 rounded-4xl border-3 border-white absolute top-100 left-58  transition transform duration-200 
+         hover:scale-110 hover:shadow-[0_0_10px_white]
+         active:scale-110 active:shadow-[0_0_10px_white]" id="button">Convert</button>
+    
+    <div class="w-148 h-23 absolute top-113 left-11  rounded-3xl bg-black border-2 border-white">
+    <div class="bg-white w-102 absolute top-3 left-3 rounded-3xl h-7 py-[2px] px-[2px]"><p class="font-serif italic px-2 font-bold bg-gray-400 w-36 rounded-3xl">Updated Rate :
+
+    <p  class="text-black w-70 absolute  left-38 bottom-[-2px] text-2xl font-sans-serif italic" id="one-rate"></p></div>
+
+    <div class="w-102 bg-white absolute top-12 left-3 rounded-3xl h-7"><div class="bg-gray-400 w-36 rounded-3xl absolute left-[2px] top-[2px] font-serif font-bold italic flex justify-center">Total Amount :</div>
+    <p id="total" class="text-black absolute left-38 font-sans italic text-2xl bottom-[-2px]"></p>
+    </div> 
+    <p class="w-30 text-black absolute left-107 top-3 font-serif text-1xl italic font-bold bg-yellow-400 rounded-3xl flex justify-center">Contact Me :</p>
+
+
+    <div class="absolute left-107 top-11 text-2xl">
+
+    <a href="https://github.com/chzaeem47" target="main"><i class='bx bxl-github text-white text-4xl'></i></a>
+    <a href="https://www.facebook.com/share/1AfD1A8VnJ/?mibextid=wwXIfr" target="main"><i class='bx bxl-facebook-circle text-4xl' style='color:#0926fd' ></i></a>
+    <a href="https://wa.me/923191520147" target="main"><i class='bx bxl-whatsapp text-4xl' style='color:#08f20d'  ></i>
+</a>
+
+    </div>
+
+
+    </div>
+
+    </div>
+    </div>
+    
+  </div>
+<script src="currencies.js"></script>
+<script src="signs.js"></script>
+<script src="names.js"></script>
+<script src="script.js" defer></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
