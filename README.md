@@ -44,4 +44,4 @@ CREATE TABLE history (
 Notes
 
 - Ensure the backend `PORT` and DB settings are correct in `.env`.
-- Frontend expects the backend on `http://localhost:3000`.
+- Frontend expects the backend on `http://localhost:3000` or on Url shown in your terminal
