@@ -1,6 +1,7 @@
 // server.js - Complete Working Backend (SIMPLE VERSION)
 const express = require('express');
 const cors = require('cors');
+const path = require("path");
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
@@ -15,6 +16,7 @@ const app = express();
 // Middleware
 app.use(cors()); // Allow all origins
 app.use(express.json());
+app.use(express.static(path.join(__dirname)));
 
 // Logging middleware
 app.use((req, res, next) => {
