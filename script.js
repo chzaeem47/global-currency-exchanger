@@ -89,7 +89,7 @@ convertBtn.addEventListener('click', async () => {
 
 // POST to backend /save-history
 async function saveHistory(record) {
-	const res = await fetch('http://localhost:3000/save-history', {
+	const res = await fetch('/save-history', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(record)
@@ -161,7 +161,7 @@ async function loadHistory() {
 	const list = document.getElementById('history-list');
 	list.innerHTML = 'Loading...';
 	try {
-		const res = await fetch('http://localhost:3000/history');
+		const res = await fetch('/history');
 		if (!res.ok) throw new Error('Network error');
 		const data = await res.json();
 		if (!Array.isArray(data) || data.length === 0) {
