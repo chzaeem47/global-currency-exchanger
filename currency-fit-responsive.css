@@ -6,7 +6,6 @@
 :root {
   --design-width: 1536px;
   --design-height: 768px;
-  
   /* On desktop, scale based on the full canvas width */
   --safe-width: var(--design-width); 
 }
